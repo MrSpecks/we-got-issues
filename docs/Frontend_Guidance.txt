@@ -1,0 +1,73 @@
+Frontend development prompt:
+You are acting as an experienced minimalist frontend html web designer.
+
+implement a full but simple and intuitive html frontend for this issue that uses jinja 2 templates, 
+modular/separated css styling and comes in the form of a user friendly single page where a user can 
+interact with the APIs CRUD function/features for issues.
+
+The application shall be called "We Got Issues" on the home page and take on a witty, 
+quirky approach to developer issue tracking, with subtly sarcastic descriptions and labels across the ui. 
+The color palette may resemble those seen in swagger ui documentation and be minimal and non-intrusive. 
+Have a footer that has a copyright and dynamic year and the text "Kagiso Mfusi. All Rights Reserved"
+
+
+
+expected output:
+📋 Project Structure
+Templates:
+
+base.html - Base template with header, footer, and dynamic year
+index.html - Single-page application with modals for create/edit
+Stylesheets (Modular CSS):
+
+base.css - CSS variables, typography, and global styles
+layout.css - Header, footer, grid system, and layout utilities
+components.css - Buttons, forms, cards, badges, alerts, modals
+components-issues.css - Issue-specific styles and controls
+JavaScript:
+
+app.js - Full CRUD API interactions, filtering, search, and modals
+Configuration:
+
+main.py - Updated FastAPI with Jinja2 template rendering and static file serving
+✨ Key Features
+UI/UX:
+
+📱 Fully responsive design (mobile, tablet, desktop)
+🎨 Swagger UI-inspired color palette with Swagger blue (#1f75ad) and minimal styling
+⚡ Smooth animations and transitions
+♿ Semantic HTML with ARIA labels for accessibility
+Issue Management:
+
+✅ Create issues with title, description, and priority (Low/Medium/High)
+📝 Edit issues: update title, description, priority, and status (Open/In Progress/Closed)
+🗑️ Delete issues with confirmation
+🔍 Real-time filtering by status and priority
+🔎 Search functionality (Ctrl+/ or Cmd+/)
+Quirky & Witty:
+
+Sarcastic descriptions: "Something's broken again..." placeholder
+Witty empty states: "Either you're doing great or you're not looking hard enough."
+Fun confirmation messages with emojis
+"Your friendly neighborhood issue tracker" tagline
+Labels like "Because preventing problems is for quitters"
+Statistics Dashboard:
+
+Live counters for Open, In Progress, Closed, and Total issues
+Auto-updating stats as you manage issues
+Modals:
+
+Create issue modal with validation
+Edit issue modal with full control over all fields
+Smooth animations with overlay
+Keyboard Shortcuts:
+
+Ctrl+N / Cmd+N - Create new issue
+Ctrl+/ / Cmd+/ - Focus search
+Esc - Close modals
+Footer:
+
+Dynamic year that updates automatically
+"Kagiso Mfusi. All Rights Reserved" text
+
+The frontend fully integrates with the existing FastAPI backend.
