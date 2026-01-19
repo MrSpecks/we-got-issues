@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from fastapi.middleware.cors import CORSMiddleware
 from starlette.requests import Request
+from app.middleware.timing import timing_middleware
 from pathlib import Path
 
 from app.routes.issues import router as issues_router
@@ -11,6 +13,16 @@ app = FastAPI(
     title="Issue Tracking API",
     version="0.1.0",
     description="This is a simple issue tracking API built with FastAPI.",
+)
+
+app.middleware("http")(timing_middleware)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Setup paths

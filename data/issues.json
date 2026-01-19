@@ -26,5 +26,12 @@
     "description": "The problem is the API is broken and Dave isn't here to fix it. We don't know what to do.",
     "priority": "high",
     "status": "open"
+  },
+  {
+    "id": "59c4faff-38f0-4005-8139-bb2b8bf8fcde",
+    "title": "I broke the wifi",
+    "description": "Look, I don't know how, but its broken.",
+    "priority": "high",
+    "status": "open"
   }
 ]
